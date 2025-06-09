@@ -5,6 +5,12 @@
 * {
     font-family: 'Open Sans', Arial;
     word-break: keep-all;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
 }
 
 p {
@@ -23,6 +29,7 @@ a:hover {
 
 .header {
     max-width: 1280px;
+    width: 100%;
     justify-items: center;
     padding: 40px 24px;
     margin: 0 auto;
@@ -51,6 +58,7 @@ a:hover {
 
 main {
     max-width: 1280px;
+    width: 100%;
     justify-items: center;
     padding: 40px 24px;
     margin: 0 auto;
@@ -65,6 +73,11 @@ main {
     .images {
         display: flex;
         gap: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .app-stores {
@@ -83,6 +96,19 @@ main {
 
     .shoulder-link {
         margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .shoulder-logo {
+        width: 600px;
+
+        @media (max-width: 768px) {
+            width: 340px;
+        }
     }
 
     .shoulder-copy {
@@ -95,6 +121,19 @@ main {
 
     .shoulder-pick-link {
         margin-top: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .shoulder-pick-logo {
+        width: 600px;
+
+        @media (max-width: 768px) {
+            width: 340px;
+        }
     }
 
     .tech-description {
@@ -107,6 +146,7 @@ main {
     .histories {
         display: flex;
         flex-direction: column;
+        gap: 8px;
         .year {
             font-size: 32px;
         }
@@ -117,6 +157,7 @@ main {
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             color: #0c43b7;
         }
     }
@@ -133,8 +174,11 @@ main {
 
 footer {
     width: 100vw;
+    padding: 16px;
+    
     section {
         max-width: 1280px;
+        width: 100%;
         margin: 40px auto 0px auto;
         align-items: flex-start;
 
