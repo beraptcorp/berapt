@@ -169,6 +169,12 @@ body {
     padding: calc(var(--nav-height) + 80px) 24px 120px;
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: calc(var(--nav-height) + 36px) 20px 72px;
+    }
+}
+
 .section-inner {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -227,7 +233,7 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(2px) brightness(0.6);
+    filter: blur(1px) brightness(0.8);
     transform: scale(1.05); /* prevents blur edge artifact */
     opacity: 0;
     transition: opacity 1.2s ease;
