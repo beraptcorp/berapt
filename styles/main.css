@@ -1026,3 +1026,719 @@ body {
     font-size: 12px;
     color: #666666;
 }
+
+/* =========================================
+   Insights — Shared Layout
+   ========================================= */
+.insights-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* =========================================
+   Insights — Hero (Index Page)
+   ========================================= */
+.insights-hero {
+    padding: calc(var(--nav-height) + 64px) 0 56px;
+    background: var(--color-black);
+    text-align: center;
+}
+
+.insights-hero .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.insights-hero-title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.insights-hero-sub {
+    font-size: 16px;
+    color: #aaaaaa;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* =========================================
+   Insights — Post List
+   ========================================= */
+.insights-list-section {
+    padding: 64px 0 96px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.insights-card {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: var(--color-white);
+}
+
+.insights-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+}
+
+.insights-card .card-image {
+    width: 280px;
+    min-height: 190px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.insights-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.insights-card:hover .card-image img {
+    transform: scale(1.04);
+}
+
+.insights-card .card-image--placeholder {
+    background: var(--color-gray-100);
+}
+
+.insights-card .card-body {
+    padding: 28px 28px 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: var(--color-gray-600);
+    line-height: 1.7;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-read-more {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: 4px;
+}
+
+.insights-empty {
+    text-align: center;
+    color: var(--color-gray-400);
+    padding: 80px 0;
+    font-size: 16px;
+}
+
+/* =========================================
+   Insights — Post Date & Tags
+   ========================================= */
+.post-date {
+    font-size: 13px;
+    color: var(--color-gray-400);
+    font-family: 'Inter', sans-serif;
+}
+
+.post-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    margin-right: 4px;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+/* =========================================
+   Insights — Post Hero (Single Post)
+   ========================================= */
+
+/* 이미지 있는 경우: 이미지 위에 오버레이 */
+.post-hero--image {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    margin-top: var(--nav-height);
+    overflow: hidden;
+}
+
+.post-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.82) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 36px;
+}
+
+/* 이미지 없는 경우: 기존 다크 배경 */
+.post-hero--no-image {
+    padding: calc(var(--nav-height) + 48px) 0 36px;
+    background: var(--color-black);
+}
+
+.insights-back {
+    display: inline-block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: color 0.15s;
+    font-family: 'Inter', sans-serif;
+}
+
+.insights-back:hover {
+    color: var(--color-white);
+}
+
+.post-title {
+    font-size: clamp(22px, 3.5vw, 36px);
+    font-weight: 900;
+    color: var(--color-white);
+    line-height: 1.3;
+    margin-bottom: 14px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.post-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.post-author {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================================
+   Insights — Post Body (Article)
+   ========================================= */
+.post-body {
+    padding: 24px 0 80px;
+}
+
+.post-body h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    color: var(--color-black);
+    line-height: 1.4;
+}
+
+.post-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 36px 0 12px;
+    color: var(--color-black);
+}
+
+.post-body h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 28px 0 10px;
+    color: var(--color-black);
+}
+
+.post-body p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-body a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.post-body a:hover {
+    opacity: 0.8;
+}
+
+.post-body strong {
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+.post-body ul,
+.post-body ol {
+    margin: 0 0 20px 24px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #333;
+}
+
+.post-body li {
+    margin-bottom: 8px;
+}
+
+.post-body blockquote {
+    border-left: 4px solid var(--color-accent);
+    margin: 32px 0;
+    padding: 16px 24px;
+    background: var(--color-accent-light);
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #444;
+}
+
+.post-body blockquote p {
+    margin: 0;
+}
+
+.post-body hr {
+    border: none;
+    border-top: 1px solid var(--color-gray-200);
+    margin: 40px 0;
+}
+
+.post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0;
+    display: block;
+}
+
+.post-body p:has(img) {
+    margin-bottom: 4px;
+}
+
+.post-body img + em,
+.post-body img + br + em {
+    display: block;
+    font-size: 13px;
+    color: var(--color-gray-400);
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.post-body img + br {
+    display: none;
+}
+
+.post-body pre {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.post-body code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 14px;
+    color: #e4e4e4;
+}
+
+.post-body p code,
+.post-body li code {
+    background: var(--color-gray-100);
+    color: #c7254e;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13.5px;
+}
+
+.post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+}
+
+.post-body th {
+    background: var(--color-gray-100);
+    font-weight: 700;
+    padding: 10px 14px;
+    border: 1px solid var(--color-gray-200);
+    text-align: left;
+}
+
+.post-body td {
+    padding: 10px 14px;
+    border: 1px solid var(--color-gray-200);
+}
+
+.post-body tr:nth-child(even) td {
+    background: var(--color-gray-100);
+}
+
+/* =========================================
+   Insights — Google Ads Container
+   ========================================= */
+.ad-container {
+    max-width: 760px;
+    margin: 16px auto;
+    padding: 12px 24px;
+    background: #f7f8f5;
+    border: 1px dashed #c8ddc6;
+    border-radius: 8px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ad-container::before {
+    content: "광고";
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #a0b89e;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   Insights — Post Navigation (이전/다음글)
+   ========================================= */
+.post-nav-section {
+    background: var(--color-gray-100);
+    padding: 48px 0 56px;
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.post-nav-list-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-gray-600);
+    text-decoration: none;
+    border: 1px solid var(--color-gray-200);
+    background: var(--color-white);
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.post-nav-list-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.post-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.post-nav-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 12px;
+    padding: 20px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+}
+
+.post-nav-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-color: var(--color-accent);
+}
+
+.post-nav-card--empty {
+    background: transparent;
+    border-color: transparent;
+    pointer-events: none;
+}
+
+.post-nav-card--next {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.nav-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.post-nav-card--next .nav-card-inner {
+    flex-direction: row-reverse;
+}
+
+.nav-card-thumb {
+    width: 72px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.nav-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.nav-card-date {
+    font-size: 11px;
+    color: var(--color-gray-400);
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* =========================================
+   Homepage — Insights Preview
+   ========================================= */
+.section-insights-preview {
+    background: var(--color-gray-100);
+}
+
+.hp-insights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.hp-insight-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.hp-insight-card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+}
+
+.hp-insight-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.hp-insight-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.hp-insight-card:hover .hp-insight-thumb img {
+    transform: scale(1.04);
+}
+
+.hp-insight-thumb--empty {
+    background: var(--color-gray-200);
+}
+
+.hp-insight-card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.hp-insight-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hp-insight-card-desc {
+    font-size: 12px;
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hp-insights-more {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.hp-insights-more-btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    border: 1.5px solid var(--color-accent);
+    padding: 10px 28px;
+    border-radius: 24px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.hp-insights-more-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+@media (max-width: 900px) {
+    .hp-insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hp-insights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   Responsive — Insights
+   ========================================= */
+@media (max-width: 700px) {
+    .insights-card {
+        grid-template-columns: 1fr;
+    }
+
+    .insights-card .card-image {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .insights-card .card-body {
+        padding: 20px;
+    }
+
+    .insights-hero {
+        padding: calc(var(--nav-height) + 40px) 0 40px;
+    }
+
+    .post-hero--image {
+        height: 300px;
+    }
+
+    .post-hero--no-image {
+        padding: calc(var(--nav-height) + 36px) 0 28px;
+    }
+
+    .post-body h2 {
+        font-size: 20px;
+    }
+
+    .post-body h3 {
+        font-size: 17px;
+    }
+
+    .post-nav-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-nav-card--next {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .post-nav-card--next .nav-card-inner {
+        flex-direction: row;
+    }
+}
