@@ -89,7 +89,15 @@ def render_markdown(text: str) -> str:
         extension_configs={},
     )
     html = md.convert(text)
-    return re.sub(r'<a ', '<a target="_blank" rel="noopener noreferrer" ', html)
+    html = re.sub(r'<a ', '<a target="_blank" rel="noopener noreferrer" ', html)
+    # 출처/참고 헤딩 바로 뒤 ul에 post-sources 클래스 부여
+    html = re.sub(
+        r'(<h[23][^>]*>(?:출처|참고\s*자료|참고|References?|Sources?)</h[23]>\s*)<ul>',
+        r'\1<ul class="post-sources">',
+        html,
+        flags=re.IGNORECASE,
+    )
+    return html
 
 
 def truncate(text: str, length: int = 120) -> str:

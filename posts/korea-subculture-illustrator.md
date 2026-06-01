@@ -1,7 +1,7 @@
 ---
 title: 한국 서브컬처 시장, 그 중심에 선 일러스트레이터
 description: 5천억 원 게임 시장과 2조 원 키덜트 시장으로 급성장하는 한국 서브컬처. 그 모든 매력의 출발점인 일러스트레이터의 역할과, 정작 그들이 마주한 수익화의 현실을 짚어봅니다.
-date: 2026-05-31
+date: 2026-05-11
 author: 비랩트
 image: /images/off_events/20251221_132920.jpg
 tags:
@@ -71,4 +71,10 @@ tags:
 
 ---
 
-*참고 자료: [파이낸셜뉴스 — 글로벌 주류로 올라선 서브컬처](https://www.fnnews.com/news/202508201826037199), [글로벌이코노믹 — 서브컬처 RPG '아트'로 유저 잡기](https://www.g-enews.com/article/ICT/2025/09/202509101159534592c5fa75ef86_1), [오픈애즈 — 서브컬처 게임의 흥행 공식](https://openads.co.kr/content/contentDetail?contsId=17520), [농민신문 — 예술인 10명 중 7명, 연 소득 1000만원 미만…절반은 겸업](https://www.nongmin.com/article/20250306500415), [MS투데이 — 예술인 76% 月 100만원도 못 벌어…절반은 부업](https://www.mstoday.co.kr/news/articleView.html?idxno=97023)*
+## 참고 자료
+
+- [파이낸셜뉴스 — 글로벌 주류로 올라선 서브컬처](https://www.fnnews.com/news/202508201826037199)
+- [글로벌이코노믹 — 서브컬처 RPG '아트'로 유저 잡기](https://www.g-enews.com/article/ICT/2025/09/202509101159534592c5fa75ef86_1)
+- [오픈애즈 — 서브컬처 게임의 흥행 공식](https://openads.co.kr/content/contentDetail?contsId=17520)
+- [농민신문 — 예술인 10명 중 7명, 연 소득 1000만원 미만…절반은 겸업](https://www.nongmin.com/article/20250306500415)
+- [MS투데이 — 예술인 76% 月 100만원도 못 벌어…절반은 부업](https://www.mstoday.co.kr/news/articleView.html?idxno=97023)

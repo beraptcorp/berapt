@@ -1,7 +1,7 @@
 ---
 title: 비랩트가 만드는 서브컬처 창작 생태계
 description: 숄더픽과 숄더, 두 플랫폼으로 창작자와 팬덤을 잇는 비랩트의 비전과 현재를 소개합니다. 일러스트레이터가 그림만으로 생계를 꾸릴 수 있는 세상을 만들기 위한 우리의 여정을 담았습니다.
-date: 2026-05-01
+date: 2026-04-27
 author: 비랩트
 image: /images/posts/berapt_events.png
 tags:
