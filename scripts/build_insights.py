@@ -38,7 +38,7 @@ SITE_NAME = "비랩트"
 DEFAULT_OG_IMAGE = f"{BASE_URL}/images/beraptBlackLogo.png"
 
 # TODO: Replace with your Google AdSense publisher ID (e.g., ca-pub-1234567890123456)
-ADSENSE_PUBLISHER_ID = "ca-pub-XXXXXXXXXXXXXXXXX"
+ADSENSE_PUBLISHER_ID = "ca-pub-4273154594644590"
 # TODO: Replace with your AdSense ad unit IDs after creating them in AdSense dashboard
 ADSENSE_SLOT_TOP = "XXXXXXXXXX"
 ADSENSE_SLOT_BOTTOM = "XXXXXXXXXX"
