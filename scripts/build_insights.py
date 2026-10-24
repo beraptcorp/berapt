@@ -382,11 +382,11 @@ def inject_insights_preview(posts: list) -> None:
         snippet = f"""    <section class="section-insights-preview">
         <div class="section-inner">
             <p class="section-label">Insights</p>
-            <h2 class="section-headline">인사이트</h2>
+            <h2 class="section-headline" data-i18n="insights.headline">인사이트</h2>
             <div class="hp-insights-grid">
 {cards}            </div>
             <div class="hp-insights-more">
-                <a href="/insights/" class="hp-insights-more-btn">모든 글 보기 →</a>
+                <a href="/insights/" class="hp-insights-more-btn" data-i18n="insights.more">모든 글 보기 →</a>
             </div>
         </div>
     </section>"""

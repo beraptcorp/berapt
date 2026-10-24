@@ -21,6 +21,12 @@
     <meta name="robots" content="index, follow">
     <meta property="og:site_name" content="비랩트">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <link rel="alternate" hreflang="ko" href="https://www.berapt.com/">
+    <link rel="alternate" hreflang="en" href="https://www.berapt.com/?lang=en">
+    <link rel="alternate" hreflang="ja" href="https://www.berapt.com/?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://www.berapt.com/">
     <link rel="manifest" href="https://www.berapt.com/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="https://www.berapt.com/favicons/ms-icon-144x144.png">
@@ -53,8 +59,8 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css?v=20261024">
     <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4273154594644590" crossorigin="anonymous"></script>
 </head>
@@ -64,19 +70,24 @@
     <nav class="sticky-nav" id="sticky-nav">
         <div class="nav-inner">
             <a href="#vision" class="nav-logo">
-                <img src="images/beraptBlackLogo.png" alt="비랩트" />
+                <img src="images/beraptBlackLogo.png" alt="비랩트" data-i18n-alt="brand.berapt" />
             </a>
             <ul class="nav-links">
-                <li><a href="#vision" class="nav-link active" data-section="vision">비전</a></li>
-                <li><a href="#services" class="nav-link" data-section="services">서비스</a></li>
+                <li><a href="#vision" class="nav-link active" data-section="vision" data-i18n="nav.vision">비전</a></li>
+                <li><a href="#services" class="nav-link" data-section="services" data-i18n="nav.services">서비스</a></li>
                 <li><a href="#occ" class="nav-link" data-section="occ">OCC</a></li>
-                <li><a href="#activities" class="nav-link" data-section="activities">활동</a></li>
-                <li><a href="#history" class="nav-link" data-section="history">업력</a></li>
-                <li><a href="#news" class="nav-link" data-section="news">뉴스</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-                <li><a href="/insights/" class="nav-link" data-section="insights">인사이트</a></li>
+                <li><a href="#activities" class="nav-link" data-section="activities" data-i18n="nav.activities">활동</a></li>
+                <li><a href="#history" class="nav-link" data-section="history" data-i18n="nav.history">업력</a></li>
+                <li><a href="#news" class="nav-link" data-section="news" data-i18n="nav.news">뉴스</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="/insights/" class="nav-link" data-section="insights" data-i18n="nav.insights">인사이트</a></li>
             </ul>
-            <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴">
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" class="lang-btn active" data-lang="ko" lang="ko" aria-label="한국어" title="한국어" aria-pressed="true"><img src="images/flags/kr.svg" alt="" width="22" height="15"></button>
+                <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false"><img src="images/flags/us.svg" alt="" width="22" height="15"></button>
+                <button type="button" class="lang-btn" data-lang="ja" lang="ja" aria-label="日本語" title="日本語" aria-pressed="false"><img src="images/flags/jp.svg" alt="" width="22" height="15"></button>
+            </div>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴" data-i18n-aria="nav.menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -85,14 +96,14 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <ul>
-            <li><a href="#vision" class="mobile-nav-link">비전</a></li>
-            <li><a href="#services" class="mobile-nav-link">서비스</a></li>
+            <li><a href="#vision" class="mobile-nav-link" data-i18n="nav.vision">비전</a></li>
+            <li><a href="#services" class="mobile-nav-link" data-i18n="nav.services">서비스</a></li>
             <li><a href="#occ" class="mobile-nav-link">OCC</a></li>
-            <li><a href="#activities" class="mobile-nav-link">활동</a></li>
-            <li><a href="#history" class="mobile-nav-link">업력</a></li>
-            <li><a href="#news" class="mobile-nav-link">뉴스</a></li>
-            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            <li><a href="/insights/" class="mobile-nav-link">인사이트</a></li>
+            <li><a href="#activities" class="mobile-nav-link" data-i18n="nav.activities">활동</a></li>
+            <li><a href="#history" class="mobile-nav-link" data-i18n="nav.history">업력</a></li>
+            <li><a href="#news" class="mobile-nav-link" data-i18n="nav.news">뉴스</a></li>
+            <li><a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contact</a></li>
+            <li><a href="/insights/" class="mobile-nav-link" data-i18n="nav.insights">인사이트</a></li>
         </ul>
     </div>
 
@@ -119,31 +130,31 @@
                 <h1 class="vision-headline">
                     Be Original, Be Real, BeRapt.
                 </h1>
-                <p class="vision-sub">
+                <p class="vision-sub" data-i18n="vision.sub">
                     <strong class="vision-highlight">숄더픽</strong>의 작품으로 팬덤을 확보하고 <br/><strong class="vision-highlight">숄더</strong>의 구독 멤버십으로 관계를 강화하며,<br/>이를 실물로 완성하는 오리지널 콘텐츠 생태계를 구축합니다.
                 </p>
 
                 <div class="vision-values">
                     <div class="vision-value-item">
-                        <strong>수익화</strong>
-                        <p>직/간접 비즈니스 기능을 제공하여 창작자의 경제적 자립을 지원합니다.</p>
+                        <strong data-i18n="vision.v1.title">수익화</strong>
+                        <p data-i18n="vision.v1.desc">직/간접 비즈니스 기능을 제공하여 창작자의 경제적 자립을 지원합니다.</p>
                     </div>
                     <div class="vision-value-item">
-                        <strong>오리지널리티</strong>
-                        <p>무한히 복제되는 AI의 잔상을 넘어, 작가의 영감이 깃든 실물을 소유하는 특별한 경험.</p>
+                        <strong data-i18n="vision.v2.title">오리지널리티</strong>
+                        <p data-i18n="vision.v2.desc">무한히 복제되는 AI의 잔상을 넘어, 작가의 영감이 깃든 실물을 소유하는 특별한 경험.</p>
                     </div>
                     <div class="vision-value-item">
-                        <strong>무한소통</strong>
-                        <p>온라인을 넘어 오프라인 현장까지, 팬덤이 숨 쉬는 모든 접점에서 입체적인 서브컬처 경험을 설계합니다.</p>
+                        <strong data-i18n="vision.v3.title">무한소통</strong>
+                        <p data-i18n="vision.v3.desc">온라인을 넘어 오프라인 현장까지, 팬덤이 숨 쉬는 모든 접점에서 입체적인 서브컬처 경험을 설계합니다.</p>
                     </div>
                 </div>
 
                 <div class="vision-name-box">
-                    <p class="vision-name-title"><strong>BeRapt</strong> 란?</p>
-                    <p class="vision-name-desc">
+                    <p class="vision-name-title" data-i18n="vision.name.title"><strong>BeRapt</strong> 란?</p>
+                    <p class="vision-name-desc" data-i18n="vision.name.desc">
                         <em>Be</em> : 되다&nbsp;&nbsp;·&nbsp;&nbsp;<em>Rapt</em> : 완전히 몰입한, 넋이 빠진
                     </p>
-                    <p class="vision-name-text">
+                    <p class="vision-name-text" data-i18n="vision.name.text">
                         <strong class="vision-highlight">비랩트</strong>는 사람들이 무언가에 진심으로 몰입할 수 있는<br/>경험을 만드는 서비스를 만들어 갑니다.
                     </p>
                 </div>
@@ -157,8 +168,8 @@
     <section class="section section-services" id="services">
         <div class="section-inner">
             <p class="section-label">Our Services</p>
-            <h2 class="section-headline">창작과 팬덤을 잇는<br/>두 개의 플랫폼</h2>
-            <p class="section-sub">
+            <h2 class="section-headline" data-i18n="services.headline">창작과 팬덤을 잇는<br/>두 개의 플랫폼</h2>
+            <p class="section-sub" data-i18n="services.sub">
                 오픈 플랫폼과 구독 커뮤니티, 두 가지 수익 구조로<br/>
                 창작자가 그림만으로 살아갈 수 있는 환경을 만듭니다.
             </p>
@@ -167,26 +178,26 @@
                 <!-- ShoulderPick -->
                 <div class="service-card service-pick">
                     <div class="service-card-header">
-                        <a href="https://pick.shoulder.fan" target="_blank"><img src="images/shoulderPickLogo.png" alt="숄더픽" class="service-logo" /></a>
+                        <a href="https://pick.shoulder.fan" target="_blank"><img src="images/shoulderPickLogo.png" alt="숄더픽" data-i18n-alt="brand.pick" class="service-logo" /></a>
                         <span class="service-badge">Open Platform</span>
                     </div>
-                    <p class="service-identity">"일러스트레이터판 유튜브"</p>
-                    <h3 class="service-name"><a href="https://pick.shoulder.fan" target="_blank">숄더픽</a></h3>
-                    <p class="service-desc">
+                    <p class="service-identity" data-i18n="pick.identity">"일러스트레이터판 유튜브"</p>
+                    <h3 class="service-name"><a href="https://pick.shoulder.fan" target="_blank" data-i18n="brand.pick">숄더픽</a></h3>
+                    <p class="service-desc" data-i18n="pick.desc">
                         창작자가 그림을 등록하면 팬들의 조회수와 관심도(Pick) 데이터에 따라 수익이 배분됩니다.
                         별도의 영업 없이 콘텐츠 파워만으로 수익을 창출하는 간접 수익 모델.
                     </p>
                     <ul class="service-features">
-                        <li>Pick 투표로 인기 콘텐츠 노출 확대, 유튜브형 자동 수익 배분</li>
-                        <li>작품 업로드만으로 굿즈 제작/판매/정산까지 원클릭 서비스</li>
-                        <li>국내 최대 서브컬처 일러스트 서비스</li>
+                        <li data-i18n="pick.f1">Pick 투표로 인기 콘텐츠 노출 확대, 유튜브형 자동 수익 배분</li>
+                        <li data-i18n="pick.f2">작품 업로드만으로 굿즈 제작/판매/정산까지 원클릭 서비스</li>
+                        <li data-i18n="pick.f3">국내 최대 서브컬처 일러스트 서비스</li>
                     </ul>
                     <div class="service-stores">
                         <a href="https://play.google.com/store/apps/details?id=fan.shoulder.pick&hl=ko" target="_blank">
-                            <img src="images/googlePlayDownload.png" alt="구글플레이" />
+                            <img src="images/googlePlayDownload.png" alt="구글플레이" data-i18n-alt="store.google" />
                         </a>
                         <a href="https://apps.apple.com/us/app/%EC%88%84%EB%8D%94%ED%94%BD-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-sns/id6550903226?l=ko" target="_blank">
-                            <img src="images/appStoreDownload.png" alt="앱스토어" />
+                            <img src="images/appStoreDownload.png" alt="앱스토어" data-i18n-alt="store.apple" />
                         </a>
                     </div>
                 </div>
@@ -194,26 +205,26 @@
                 <!-- Shoulder -->
                 <div class="service-card service-shoulder">
                     <div class="service-card-header">
-                        <a href="https://shoulder.fan" target="_blank"><img src="images/shoulderLogo.png" alt="숄더" class="service-logo" /></a>
+                        <a href="https://shoulder.fan" target="_blank"><img src="images/shoulderLogo.png" alt="숄더" data-i18n-alt="brand.shoulder" class="service-logo" /></a>
                         <span class="service-badge">Subscription</span>
                     </div>
-                    <p class="service-identity">"유튜브 멤버십형 팬커뮤니티"</p>
-                    <h3 class="service-name"><a href="https://shoulder.fan" target="_blank">숄더</a></h3>
-                    <p class="service-desc">
+                    <p class="service-identity" data-i18n="shoulder.identity">"유튜브 멤버십형 팬커뮤니티"</p>
+                    <h3 class="service-name"><a href="https://shoulder.fan" target="_blank" data-i18n="brand.shoulder">숄더</a></h3>
+                    <p class="service-desc" data-i18n="shoulder.desc">
                         유료 구독자 전용 한정 콘텐츠(미공개 시안, 고화질 원본 등)를 제공합니다.
                         작가와 팬 사이의 밀착 소통으로 안정적인 월간 정기 수익을 창출합니다.
                     </p>
                     <ul class="service-features">
-                        <li>구독 기반 월정기 수익창출, 일회성 후원 기능도 제공</li>
-                        <li>멤버십 전용 한정 콘텐츠 제공</li>
-                        <li>팬·창작자 밀착 소통 커뮤니티</li>
+                        <li data-i18n="shoulder.f1">구독 기반 월정기 수익창출, 일회성 후원 기능도 제공</li>
+                        <li data-i18n="shoulder.f2">멤버십 전용 한정 콘텐츠 제공</li>
+                        <li data-i18n="shoulder.f3">팬·창작자 밀착 소통 커뮤니티</li>
                     </ul>
                     <div class="service-stores">
                         <a href="https://play.google.com/store/apps/details?id=com.berapt.shoulder&hl=ko" target="_blank">
-                            <img src="images/googlePlayDownload.png" alt="구글플레이" />
+                            <img src="images/googlePlayDownload.png" alt="구글플레이" data-i18n-alt="store.google" />
                         </a>
                         <a href="https://apps.apple.com/us/app/%EC%88%84%EB%8D%94-%EC%9E%91%EA%B0%80-%EC%9D%91%EC%9B%90-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0/id6463396851?l=ko" target="_blank">
-                            <img src="images/appStoreDownload.png" alt="앱스토어" />
+                            <img src="images/appStoreDownload.png" alt="앱스토어" data-i18n-alt="store.apple" />
                         </a>
                     </div>
                 </div>
@@ -228,7 +239,7 @@
         <div class="section-inner">
             <p class="section-label">Solution</p>
             <h2 class="section-headline">Original Collection Card (OCC)</h2>
-            <p class="section-sub">
+            <p class="section-sub" data-i18n="occ.sub">
                 실물 굿즈 판매를 통해 디지털 IP의 가치를 극대화합니다.<br/>
                 AI가 흉내 낼 수 없는 작가의 온기를 손끝에 닿는 물리적 가치로 완성합니다.
             </p>
@@ -243,15 +254,15 @@
                                 <img src="images/occ1_title.jpg" alt="OCC Season 1" />
                             </div>
                             <div class="occ-card-info">
-                                <h3>숄더픽 OCC Vol.1</h3>
-                                <p>비랩트 생태계의 시작을 알린 초기 한정판 컬렉션</p>
-                                <span class="occ-status occ-status-soldout">품절</span>
+                                <h3 data-i18n="occ.s1.title">숄더픽 OCC Vol.1</h3>
+                                <p data-i18n="occ.s1.front">비랩트 생태계의 시작을 알린 초기 한정판 컬렉션</p>
+                                <span class="occ-status occ-status-soldout" data-i18n="occ.soldout">품절</span>
                             </div>
                         </div>
                         <div class="occ-card-back">
                             <p class="occ-back-title">Season 1</p>
-                            <p class="occ-back-desc">비랩트 창작 생태계의 첫 번째 오리지널 굿즈. 소량 제작으로 이제 다시 만나기 어려운 콜렉션</p>
-                            <a href="https://smartstore.naver.com/shoulderfan/products/11647843103" target="_blank" class="occ-cta-btn">소장하기</a>
+                            <p class="occ-back-desc" data-i18n="occ.s1.back">비랩트 창작 생태계의 첫 번째 오리지널 굿즈. 소량 제작으로 이제 다시 만나기 어려운 콜렉션</p>
+                            <a href="https://smartstore.naver.com/shoulderfan/products/11647843103" target="_blank" class="occ-cta-btn" data-i18n="occ.cta">소장하기</a>
                         </div>
                     </div>
                 </div>
@@ -265,15 +276,15 @@
                                 <img src="images/occ2_title.jpg" alt="OCC Season 2" />
                             </div>
                             <div class="occ-card-info">
-                                <h3>숄더픽 OCC Vol.2</h3>
-                                <p>참여 작가군 확대 및 작가 친필 사인카드 추가</p>
-                                <span class="occ-status occ-status-soldout">품절</span>
+                                <h3 data-i18n="occ.s2.title">숄더픽 OCC Vol.2</h3>
+                                <p data-i18n="occ.s2.front">참여 작가군 확대 및 작가 친필 사인카드 추가</p>
+                                <span class="occ-status occ-status-soldout" data-i18n="occ.soldout">품절</span>
                             </div>
                         </div>
                         <div class="occ-card-back">
                             <p class="occ-back-title">Season 2</p>
-                            <p class="occ-back-desc">확장된 작가 라인업과 작가 친필 사인카드가 추가된 업그레이드 컬렉션.</p>
-                            <a href="https://smartstore.naver.com/shoulderfan/products/12427472831" target="_blank" class="occ-cta-btn">소장하기</a>
+                            <p class="occ-back-desc" data-i18n="occ.s2.back">확장된 작가 라인업과 작가 친필 사인카드가 추가된 업그레이드 컬렉션.</p>
+                            <a href="https://smartstore.naver.com/shoulderfan/products/12427472831" target="_blank" class="occ-cta-btn" data-i18n="occ.cta">소장하기</a>
                         </div>
                     </div>
                 </div>
@@ -287,15 +298,15 @@
                                 <img src="images/occ3_title.jpg" alt="OCC Season 3" />
                             </div>
                             <div class="occ-card-info">
-                                <h3>숄더픽 OCC Vol.3</h3>
-                                <p>시리즈의 인기를 이어가는 세번째 시리즈</p>
-                                <span class="occ-status occ-status-sale">판매중</span>
+                                <h3 data-i18n="occ.s3.title">숄더픽 OCC Vol.3</h3>
+                                <p data-i18n="occ.s3.front">시리즈의 인기를 이어가는 세번째 시리즈</p>
+                                <span class="occ-status occ-status-sale" data-i18n="occ.onsale">판매중</span>
                             </div>
                         </div>
                         <div class="occ-card-back">
                             <p class="occ-back-title">Season 3</p>
-                            <p class="occ-back-desc">친필 사인과 디지털 사인이 추가되어, 수집 목적을 강화한 컬렉션.</p>
-                            <a href="https://smartstore.naver.com/shoulderfan/products/13256549409" target="_blank" class="occ-cta-btn">소장하기</a>
+                            <p class="occ-back-desc" data-i18n="occ.s3.back">친필 사인과 디지털 사인이 추가되어, 수집 목적을 강화한 컬렉션.</p>
+                            <a href="https://smartstore.naver.com/shoulderfan/products/13256549409" target="_blank" class="occ-cta-btn" data-i18n="occ.cta">소장하기</a>
                         </div>
                     </div>
                 </div>
@@ -309,15 +320,15 @@
                                 <img src="images/occ4_title.png" alt="OCC Season 4" />
                             </div>
                             <div class="occ-card-info">
-                                <h3>숄더픽 OCC Vol.4</h3>
-                                <p>숄더픽 OCC 시리즈의 네 번째 컬렉션</p>
+                                <h3 data-i18n="occ.s4.title">숄더픽 OCC Vol.4</h3>
+                                <p data-i18n="occ.s4.front">숄더픽 OCC 시리즈의 네 번째 컬렉션</p>
                                 <span class="occ-status occ-status-new">NEW</span>
                             </div>
                         </div>
                         <div class="occ-card-back">
                             <p class="occ-back-title">Season 4</p>
-                            <p class="occ-back-desc">새롭게 선보이는 숄더픽 OCC 시리즈의 최신 컬렉션.</p>
-                            <a href="https://smartstore.naver.com/shoulderfan/products/13754973830" target="_blank" class="occ-cta-btn">소장하기</a>
+                            <p class="occ-back-desc" data-i18n="occ.s4.back">새롭게 선보이는 숄더픽 OCC 시리즈의 최신 컬렉션.</p>
+                            <a href="https://smartstore.naver.com/shoulderfan/products/13754973830" target="_blank" class="occ-cta-btn" data-i18n="occ.cta">소장하기</a>
                         </div>
                     </div>
                 </div>
@@ -331,26 +342,26 @@
     <section class="section section-activities" id="activities">
         <div class="section-inner">
             <p class="section-label">Activities</p>
-            <h2 class="section-headline">현장에서 만나는 비랩트</h2>
-            <p class="section-sub">
+            <h2 class="section-headline" data-i18n="activities.headline">현장에서 만나는 비랩트</h2>
+            <p class="section-sub" data-i18n="activities.sub">
                 오프라인 행사, 전시, 파트너십 현장의 생생한 순간들.
             </p>
             <div class="activities-grid" id="activities-grid">
-                <div class="activity-item"><img src="images/off_events/1000036731.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/1000037217.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/1000037993.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20231008_103255.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20240218_120052.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20240824_103931.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20250322_152217.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20250323_153016.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20250927_113041.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20251003_115205.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20251221_122826.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/20251221_132920.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/IMG_2515.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/IMG_6608.jpg" alt="비랩트 활동" loading="lazy" /></div>
-                <div class="activity-item"><img src="images/off_events/IMG_6916.jpg" alt="비랩트 활동" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/1000036731.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/1000037217.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/1000037993.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20231008_103255.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20240218_120052.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20240824_103931.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20250322_152217.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20250323_153016.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20250927_113041.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20251003_115205.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20251221_122826.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/20251221_132920.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/IMG_2515.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/IMG_6608.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
+                <div class="activity-item"><img src="images/off_events/IMG_6916.jpg" alt="비랩트 활동" data-i18n-alt="activities.alt" loading="lazy" /></div>
             </div>
         </div>
     </section>
@@ -361,8 +372,8 @@
     <section class="section section-history" id="history">
         <div class="section-inner">
             <p class="section-label">Company History</p>
-            <h2 class="section-headline">비랩트의 걸어온 길</h2>
-            <p class="section-sub">
+            <h2 class="section-headline" data-i18n="history.headline">비랩트의 걸어온 길</h2>
+            <p class="section-sub" data-i18n="history.sub">
                 2022년 설립부터 지금까지, 서브컬처 창작 생태계를 만들어가는 여정.
             </p>
 
@@ -373,11 +384,11 @@
                         <div class="history-items">
                             <div class="history-item">
                                 <span class="history-month">Apr.</span>
-                                <span class="history-desc">중기부·구글플레이 공동 '창구 프로그램 7기' 최종 선정</span>
+                                <span class="history-desc" data-i18n="history.2025.apr">중기부·구글플레이 공동 '창구 프로그램 7기' 최종 선정</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Mar.</span>
-                                <span class="history-desc">숄더픽 첫 오리지널 굿즈 상품 판매 시작 — OCC</span>
+                                <span class="history-desc" data-i18n="history.2025.mar">숄더픽 첫 오리지널 굿즈 상품 판매 시작 — OCC</span>
                             </div>
                         </div>
                     </div>
@@ -386,27 +397,27 @@
                         <div class="history-items">
                             <div class="history-item">
                                 <span class="history-month">Oct.</span>
-                                <span class="history-desc">숄더픽 iOS/Android 앱 동시 출시</span>
+                                <span class="history-desc" data-i18n="history.2024.oct">숄더픽 iOS/Android 앱 동시 출시</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Aug.</span>
-                                <span class="history-desc">서브컬처 이미지 사이트 '숄더픽' 출시</span>
+                                <span class="history-desc" data-i18n="history.2024.aug1">서브컬처 이미지 사이트 '숄더픽' 출시</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Aug.</span>
-                                <span class="history-desc">한국콘텐츠진흥원 2024 글로벌 Launchpad &lt;일본&gt; 프로그램 최종 선정</span>
+                                <span class="history-desc" data-i18n="history.2024.aug2">한국콘텐츠진흥원 2024 글로벌 Launchpad &lt;일본&gt; 프로그램 최종 선정</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Jul.</span>
-                                <span class="history-desc">한국전파진흥협회 2024 Cre-UP 프로그램 최종 선정</span>
+                                <span class="history-desc" data-i18n="history.2024.jul1">한국전파진흥협회 2024 Cre-UP 프로그램 최종 선정</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Jul.</span>
-                                <span class="history-desc">신용보증기금 Startup-NEST 16기 최종 선정</span>
+                                <span class="history-desc" data-i18n="history.2024.jul2">신용보증기금 Startup-NEST 16기 최종 선정</span>
                             </div>
                             <div class="history-item history-item-highlight">
                                 <span class="history-month">Jan.</span>
-                                <span class="history-desc">일본 '아무타스'로부터 PreA Round 투자 유치</span>
+                                <span class="history-desc" data-i18n="history.2024.jan">일본 '아무타스'로부터 PreA Round 투자 유치</span>
                             </div>
                         </div>
                     </div>
@@ -415,23 +426,23 @@
                         <div class="history-items">
                             <div class="history-item">
                                 <span class="history-month">Dec.</span>
-                                <span class="history-desc">'숄더' iOS 앱 출시</span>
+                                <span class="history-desc" data-i18n="history.2023.dec">'숄더' iOS 앱 출시</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Jun.</span>
-                                <span class="history-desc">'숄더' 정식 출시 및 Android 앱 출시</span>
+                                <span class="history-desc" data-i18n="history.2023.jun">'숄더' 정식 출시 및 Android 앱 출시</span>
                             </div>
                             <div class="history-item history-item-highlight">
                                 <span class="history-month">Apr.</span>
-                                <span class="history-desc">TIPS 최종 선정 + 해외마케팅/창업사업화 지원사업 동시 선정</span>
+                                <span class="history-desc" data-i18n="history.2023.apr">TIPS 최종 선정 + 해외마케팅/창업사업화 지원사업 동시 선정</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Mar.</span>
-                                <span class="history-desc">집단지성 번역 솔루션 ㈜플리토 MOU</span>
+                                <span class="history-desc" data-i18n="history.2023.mar">집단지성 번역 솔루션 ㈜플리토 MOU</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Jan.</span>
-                                <span class="history-desc">작가 응원 커뮤니티 '숄더' 베타 출시</span>
+                                <span class="history-desc" data-i18n="history.2023.jan">작가 응원 커뮤니티 '숄더' 베타 출시</span>
                             </div>
                         </div>
                     </div>
@@ -440,15 +451,15 @@
                         <div class="history-items">
                             <div class="history-item history-item-highlight">
                                 <span class="history-month">Dec.</span>
-                                <span class="history-desc">'김기사랩'으로부터 Seed Round 투자 유치</span>
+                                <span class="history-desc" data-i18n="history.2022.dec">'김기사랩'으로부터 Seed Round 투자 유치</span>
                             </div>
                             <div class="history-item">
                                 <span class="history-month">Nov.</span>
-                                <span class="history-desc">웹툰작가 에이전시 ㈜크랙엔터테인먼트 MOU</span>
+                                <span class="history-desc" data-i18n="history.2022.nov">웹툰작가 에이전시 ㈜크랙엔터테인먼트 MOU</span>
                             </div>
                             <div class="history-item history-item-highlight">
                                 <span class="history-month">May.</span>
-                                <span class="history-desc">비랩트 설립</span>
+                                <span class="history-desc" data-i18n="history.2022.may">비랩트 설립</span>
                             </div>
                         </div>
                     </div>
@@ -463,24 +474,24 @@
     <section class="section section-news" id="news">
         <div class="section-inner">
             <p class="section-label">News</p>
-            <h2 class="section-headline">비랩트 소식</h2>
-            <p class="section-sub">언론과 미디어가 주목한 비랩트의 이야기.</p>
+            <h2 class="section-headline" data-i18n="news.headline">비랩트 소식</h2>
+            <p class="section-sub" data-i18n="news.sub">언론과 미디어가 주목한 비랩트의 이야기.</p>
             <div class="news-grid">
                 <a class="news-card" href="https://it.chosun.com/news/articleView.html?idxno=2023092139155" target="_blank" rel="noopener">
-                    <span class="news-source">조선일보 IT</span>
-                    <p class="news-title">비랩트, 중기부·구글플레이 공동 '창구 프로그램 7기' 최종 선정</p>
+                    <span class="news-source" data-i18n="news.n1.source">조선일보 IT</span>
+                    <p class="news-title" data-i18n="news.n1.title">비랩트, 중기부·구글플레이 공동 '창구 프로그램 7기' 최종 선정</p>
                     <span class="news-date">2025. 04</span>
                     <span class="news-arrow">→</span>
                 </a>
                 <a class="news-card" href="https://biz.chosun.com/it-science/ict/2024/01/25/MHERS6BPHBG4RKEPKBDTWU5YTI/" target="_blank" rel="noopener">
-                    <span class="news-source">조선비즈</span>
-                    <p class="news-title">비랩트, 일본 아무타스로부터 PreA 라운드 투자 유치</p>
+                    <span class="news-source" data-i18n="news.n2.source">조선비즈</span>
+                    <p class="news-title" data-i18n="news.n2.title">비랩트, 일본 아무타스로부터 PreA 라운드 투자 유치</p>
                     <span class="news-date">2024. 01</span>
                     <span class="news-arrow">→</span>
                 </a>
                 <a class="news-card" href="https://www.nextdaily.co.kr/news/articleView.html?idxno=219942" target="_blank" rel="noopener">
-                    <span class="news-source">넥스트데일리</span>
-                    <p class="news-title">작가 응원 커뮤니티 '숄더' 운영사 비랩트, 중기부 팁스(TIPS) 선정</p>
+                    <span class="news-source" data-i18n="news.n3.source">넥스트데일리</span>
+                    <p class="news-title" data-i18n="news.n3.title">작가 응원 커뮤니티 '숄더' 운영사 비랩트, 중기부 팁스(TIPS) 선정</p>
                     <span class="news-date">2023. 04</span>
                     <span class="news-arrow">→</span>
                 </a>
@@ -495,7 +506,7 @@
     <section class="section-insights-preview">
         <div class="section-inner">
             <p class="section-label">Insights</p>
-            <h2 class="section-headline">인사이트</h2>
+            <h2 class="section-headline" data-i18n="insights.headline">인사이트</h2>
             <div class="hp-insights-grid">
                 <a href="/insights/ai-era-human-art-goods/" class="hp-insight-card">
                     <div class="hp-insight-thumb"><img src="/images/posts/gen_ai.jpeg" alt="AI가 그림을 쏟아낼수록, '사람이 그린 그림'은 더 귀해진다"></div>
@@ -535,7 +546,7 @@
                 </a>
             </div>
             <div class="hp-insights-more">
-                <a href="/insights/" class="hp-insights-more-btn">모든 글 보기 →</a>
+                <a href="/insights/" class="hp-insights-more-btn" data-i18n="insights.more">모든 글 보기 →</a>
             </div>
         </div>
     </section>
@@ -547,8 +558,8 @@
     <section class="section section-contact" id="contact">
         <div class="section-inner">
             <p class="section-label">Get in Touch</p>
-            <h2 class="section-headline">함께 만들어가요</h2>
-            <p class="section-sub">
+            <h2 class="section-headline" data-i18n="contact.headline">함께 만들어가요</h2>
+            <p class="section-sub" data-i18n="contact.sub">
                 투자, 제휴, 입사 등 비랩트와 관련된 모든 문의를 환영합니다.
             </p>
 
@@ -556,25 +567,25 @@
                 <div class="contact-item" id="berapt-contact">
                     <span class="contact-icon">✉</span>
                     <div>
-                        <p class="contact-label-text">이메일</p>
+                        <p class="contact-label-text" data-i18n="contact.email">이메일</p>
                         <p class="contact-value">support@berapt.com</p>
-                        <p class="contact-hint">클릭하면 복사됩니다</p>
+                        <p class="contact-hint" data-i18n="contact.hint">클릭하면 복사됩니다</p>
                     </div>
                 </div>
                 <div class="contact-divider"></div>
                 <div class="contact-item">
                     <span class="contact-icon">📞</span>
                     <div>
-                        <p class="contact-label-text">전화</p>
-                        <p class="contact-value">070-4115-4732</p>
+                        <p class="contact-label-text" data-i18n="contact.phone">전화</p>
+                        <p class="contact-value" data-i18n="contact.phone.value">070-4115-4732</p>
                     </div>
                 </div>
                 <div class="contact-divider"></div>
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
                     <div>
-                        <p class="contact-label-text">주소</p>
-                        <p class="contact-value">서울시 강서구 마곡중앙8로 14 406호 (07801)</p>
+                        <p class="contact-label-text" data-i18n="contact.address">주소</p>
+                        <p class="contact-value" data-i18n="contact.address.value">서울시 강서구 마곡중앙8로 14 406호 (07801)</p>
                     </div>
                 </div>
             </div>
@@ -583,12 +594,13 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <b>주식회사 비랩트</b>
-            <span>사업자 등록번호 : 411-88-02619 · 통신판매업 신고번호 : 제2022-서울강남-05265호</span>
-            <span>대표 : 이원제 · 전화 : 070-4115-4732 · 주소 : 서울시 강서구 마곡중앙8로 14 406호 (07801)</span>
+            <b data-i18n="footer.company">주식회사 비랩트</b>
+            <span data-i18n="footer.reg">사업자 등록번호 : 411-88-02619 · 통신판매업 신고번호 : 제2022-서울강남-05265호</span>
+            <span data-i18n="footer.info">대표 : 이원제 · 전화 : 070-4115-4732 · 주소 : 서울시 강서구 마곡중앙8로 14 406호 (07801)</span>
         </div>
     </footer>
 
+    <script src="js/i18n.js?v=20261024"></script>
     <script>
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -654,7 +666,7 @@
         document.getElementById('berapt-contact').addEventListener('click', async () => {
             try {
                 await navigator.clipboard.writeText('support@berapt.com');
-                alert('이메일이 복사되었습니다');
+                alert(window.beraptI18n.t('contact.copied'));
             } catch (err) {
                 console.error('Failed to copy:', err);
             }
