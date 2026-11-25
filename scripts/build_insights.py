@@ -3,8 +3,9 @@
 Build static HTML pages for the Insights blog section.
 
 Usage:
-    pip install PyYAML markdown
-    python scripts/build_insights.py
+    python3 -m venv .venv                              # once
+    .venv/bin/pip install -r scripts/requirements.txt  # once
+    .venv/bin/python scripts/build_insights.py
 
 What it does:
     - Scans posts/*.md (skips files starting with _)
@@ -21,12 +22,12 @@ from pathlib import Path
 try:
     import yaml
 except ImportError:
-    raise SystemExit("PyYAML 설치 필요: pip install PyYAML")
+    raise SystemExit("PyYAML 설치 필요: .venv/bin/python scripts/build_insights.py 로 실행하세요 (최초 1회: python3 -m venv .venv && .venv/bin/pip install -r scripts/requirements.txt)")
 
 try:
     import markdown
 except ImportError:
-    raise SystemExit("markdown 설치 필요: pip install markdown")
+    raise SystemExit("markdown 설치 필요: .venv/bin/python scripts/build_insights.py 로 실행하세요 (최초 1회: python3 -m venv .venv && .venv/bin/pip install -r scripts/requirements.txt)")
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
